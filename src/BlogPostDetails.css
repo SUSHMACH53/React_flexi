@@ -1,0 +1,50 @@
+.blog-post-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 16px;
+  color: #999999;
+  margin-bottom: 30px;
+}
+
+.content {
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.content a:hover {
+  color: #0056b3;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+  margin-top: 100px;
+}

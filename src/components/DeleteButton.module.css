@@ -1,0 +1,23 @@
+/* DeleteButton.module.css */
+.deleteButton {
+  background: #FF0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 16px;
+  min-width: 100px;
+  transition: background 0.2s;
+}
+.deleteButton:focus {
+  outline: 2px solid #007BFF;
+}
+@media (max-width: 768px) {
+  .deleteButton {
+    width: 100%;
+    min-height: 44px;
+  }
+}
