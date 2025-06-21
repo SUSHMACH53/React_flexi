@@ -4,6 +4,7 @@ import BlogPostDetail from './components/BlogPostDetail';
 import BlogPostForm from './components/BlogPostForm';
 import { Routes, Route, useParams, Link, useNavigate } from 'react-router-dom';
 import './App.css';
+import Layout from './components/Layout';
 
 const initialPosts = [
 	{
@@ -118,10 +119,7 @@ const App = () => {
 		setPosts(posts.filter((p) => p.id !== deleteId));
 	};
 	return (
-		<>
-			<header style={{ textAlign: 'center', fontSize: 32, fontWeight: 'bold', margin: '32px 0 0 0', letterSpacing: 1, color: '#333', fontFamily: 'Arial, Roboto, sans-serif' }}>
-				My Blog
-			</header>
+		<Layout>
 			<Routes>
 				<Route
 					path="/"
@@ -144,7 +142,7 @@ const App = () => {
 				<Route path="/create" element={<BlogPostFormWrapper posts={posts} setPosts={setPosts} isEdit={false} />} />
 				<Route path="/edit/:id" element={<BlogPostFormWrapper posts={posts} setPosts={setPosts} isEdit={true} />} />
 			</Routes>
-		</>
+		</Layout>
 	);
 };
 
