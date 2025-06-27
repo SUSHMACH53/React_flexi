@@ -46,6 +46,66 @@
   color: #0056b3;
 }
 
+/* Section styles for research blog content */
+.backgroundContext {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f5f8fa;
+  border-left: 5px solid #007BFF;
+  border-radius: 6px;
+}
+
+.literatureReview {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f8f9fb;
+  border-left: 5px solid #28a745;
+  border-radius: 6px;
+}
+
+.problemStatement {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #fff8f0;
+  border-left: 5px solid #ffc107;
+  border-radius: 6px;
+}
+
+.significance {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f6fafd;
+  border-left: 5px solid #17a2b8;
+  border-radius: 6px;
+}
+
+.statusQuo {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f9f9f9;
+  border-left: 5px solid #6c757d;
+  border-radius: 6px;
+}
+
+.researchObjectives {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f4f8f6;
+  border-left: 5px solid #6610f2;
+  border-radius: 6px;
+}
+
+.thesisStatement {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f7f7fa;
+  border-left: 5px solid #e83e8c;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
 @media (max-width: 768px) {
   .blogPostDetail {
     padding: 20px;
