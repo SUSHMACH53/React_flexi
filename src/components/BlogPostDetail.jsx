@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import styles from '../BlogPostDetail.module.css';
 import DeleteButton from './DeleteButton';
 import ConfirmationDialog from './ConfirmationDialog';
+import CommentList from './CommentList';
+import CommentForm from './CommentForm';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const BlogPostDetail = ({ title, content, author, date, onDelete }) => {
   const [showDialog, setShowDialog] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [comments, setComments] = useState([
+    // Example initial comment (remove or keep as needed)
+    // { name: 'Alice', date: new Date(), text: 'Great post!', avatar: '' },
+  ]);
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -28,6 +34,17 @@ const BlogPostDetail = ({ title, content, author, date, onDelete }) => {
     navigate('/');
   };
 
+  const handleAddComment = (comment) => {
+    setComments((prev) => [
+      ...prev,
+      {
+        ...comment,
+        date: new Date(),
+        avatar: '', // You can add avatar logic here
+      },
+    ]);
+  };
+
   return (
     <div className={styles.blogPostDetail}>
       <h1 className={styles.title}>{title}</h1>
@@ -46,6 +63,10 @@ const BlogPostDetail = ({ title, content, author, date, onDelete }) => {
         onConfirm={handleDelete}
         loading={deleting}
       />
+      {/* Comment Section */}
+      <h2 style={{ marginTop: 48, fontSize: 24, color: '#333' }}>Comments</h2>
+      <CommentList comments={comments} />
+      <CommentForm onSubmit={handleAddComment} isLoggedIn={false} userName="" />
     </div>
   );
 };
