@@ -1,0 +1,137 @@
+/* SearchBar.module.css */
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  padding: 2px 8px 2px 16px;
+  min-width: 220px;
+  max-width: 320px;
+  width: 100%;
+  margin-left: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  flex: 1;
+  padding: 8px 0;
+  color: #222;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: 2px solid #007BFF;
+  background: #f0f7ff;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  margin-left: 4px;
+  color: #007BFF;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.button:focus {
+  outline: 2px solid #007BFF;
+  background: #e6f0ff;
+}
+
+.icon {
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.srOnly {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Mobile styles */
+.mobileSearchWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.iconButton:focus {
+  outline: 2px solid #007BFF;
+  background: #e6f0ff;
+  color: #007BFF;
+}
+
+.mobileSearchBar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 2px 8px 2px 16px;
+  width: 100vw;
+  max-width: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.cancelButton {
+  background: none;
+  border: none;
+  color: #007BFF;
+  font-size: 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.cancelButton:focus {
+  outline: 2px solid #007BFF;
+  background: #e6f0ff;
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    display: none;
+  }
+  .mobileSearchWrapper {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobileSearchWrapper {
+    display: none;
+  }
+}
