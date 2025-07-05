@@ -16,9 +16,17 @@ const BlogPostDetail = ({ title, content, author, date, onDelete }) => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  if (!title || !content || !author || !date) {
-    return <p className="not-found">Blog post not found.</p>;
-  }
+if (!title || !content || !author || !date) {
+  return (
+    <div className={styles.blogPostDetail}>
+      <h2 style={{ color: '#c00', textAlign: 'center', margin: '40px 0' }}>Blog post not found.</h2>
+      <p style={{ textAlign: 'center' }}>
+        The post you are looking for does not exist or was deleted.<br />
+        <a href="/" style={{ color: '#007BFF', textDecoration: 'underline' }}>Go back to home</a>
+      </p>
+    </div>
+  );
+}
 
   const formattedDate = new Date(date).toLocaleDateString('en-US', {
     month: 'long',
